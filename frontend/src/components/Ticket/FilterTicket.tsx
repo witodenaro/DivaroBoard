@@ -11,7 +11,7 @@ interface IProps {
 
 const FilterTicket = ({ onFilterFieldClick, filter }: IProps) => {
   return (
-    <Ticket className="absolute top-10 left-0 bg-white">
+    <Ticket className="absolute top-10 left-0 bg-white z-10">
       {Object.keys(filter).map((field) => (
         <TicketField key={field} className="justify-center" show={true}>
           <button
