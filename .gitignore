@@ -2,4 +2,4 @@
 
 **/*/.env
 
-backend/src/**/*.json
+**/db/**/*.json
