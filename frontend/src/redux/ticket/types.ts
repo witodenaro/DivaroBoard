@@ -10,9 +10,30 @@ export const ActionTypes = {
   UPDATE_TICKET: 'UPDATE_TICKET',
   UPDATE_TICKET_FAILURE: 'UPDATE_TICKET_FAILURE',
   UPDATE_TICKET_SUCCESS: 'UPDATE_TICKET_SUCCESS',
+
+  CREATE_TICKET: 'CREATE_TICKET',
+  CREATE_TICKET_FAILURE: 'CREATE_TICKET_FAILURE',
+  CREATE_TICKET_SUCCESS: 'CREATE_TICKET_SUCCESS',
+
+  DELETE_TICKET: 'DELETE_TICKET',
+  DELETE_TICKET_FAILURE: 'DELETE_TICKET_FAILURE',
+  DELETE_TICKET_SUCCESS: 'DELETE_TICKET_SUCCESS',
+
+  DELETE_STATUS: 'DELETE_STATUS',
+  DELETE_STATUS_FAILURE: 'DELETE_STATUS_FAILURE',
+  DELETE_STATUS_SUCCESS: 'DELETE_STATUS_SUCCESS',
+
+  FETCH_TICKETS: 'FETCH_TICKETS',
+  FETCH_TICKETS_FAILURE: 'FETCH_TICKETS_FAILURE',
+  FETCH_TICKETS_SUCCESS: 'FETCH_TICKETS_SUCCESS',
+
+  FETCH_STATUSES: 'FETCH_STATUSES',
+  FETCH_STATUSES_FAILURE: 'FETCH_STATUSES_FAILURE',
+  FETCH_STATUSES_SUCCESS: 'FETCH_STATUSES_SUCCESS',
 };
 
 export interface IStatus {
+  id?: string;
   color: string;
   title: string;
   type: string;
@@ -59,7 +80,28 @@ export interface IAddStatus {
 export interface IUpdateTicket {
   type: string;
   payload: {
-    ticket: ITicket;
+    ticket: Partial<ITicket>;
+    id: string;
+  };
+}
+
+export interface ICreateTicket {
+  type: string;
+  payload: {
+    ticket: Partial<ITicket>;
+  };
+}
+
+export interface IDeleteTicket {
+  type: string;
+  payload: {
+    id: string;
+  };
+}
+
+export interface IDeleteStatus {
+  type: string;
+  payload: {
     id: string;
   };
 }

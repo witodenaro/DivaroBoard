@@ -37,6 +37,9 @@ const Header = () => {
         />
       )}
       <ColumnCreator />
+      <Link className="mr-4" to={ROUTES.CREATE_TICKET}>
+        Create new ticket
+      </Link>
     </div>
   );
 };

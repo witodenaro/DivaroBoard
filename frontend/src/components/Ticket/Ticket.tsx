@@ -8,7 +8,7 @@ interface IProps {
 
 const Ticket = ({ children, className, handleClick }: IProps) => {
   const defaultClasses =
-    'border rounded-lg p-4 w-44 flex flex-col mt-2 transition transition-all hover:shadow-xl';
+    'border rounded-lg p-4 w-60 flex flex-col mt-2 transition transition-all hover:shadow-xl';
 
   return (
     <article

@@ -1,4 +1,4 @@
-import { IStatus } from '../../../redux/ticket/types';
+import { IStatus } from '../../redux/ticket/types';
 
 interface IProps {
   status: IStatus;

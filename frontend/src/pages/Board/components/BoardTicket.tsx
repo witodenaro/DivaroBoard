@@ -26,14 +26,14 @@ const BoardTicket = ({ onTicketClick, ticket, filter }: IProps) => {
       handleClick={onTicketClick}
     >
       <TicketField className="border-2 border-black" show={filter.title}>
-        {title}
+        {title || 'No title'}
       </TicketField>
-      <TicketField className="my-4 border" show={filter.description}>
-        {description}
+      <TicketField className="my-4 p-1 border" show={filter.description}>
+        {description || 'No description provided'}
       </TicketField>
       <TicketField className="flex flex-col text-s" show={filter.assignee}>
         <span>Assigned:</span>
-        <span>{assignee}</span>
+        <span>{assignee || '-'}</span>
       </TicketField>
       <TicketField className="text-xs mt-auto" show={filter.publishDate}>
         {moment(publishDate).format('DD MMM YYYY')}

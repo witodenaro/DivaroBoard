@@ -9,7 +9,7 @@ const COLORS = [
 ];
 
 export const getRandomBgColor = () => {
-  return COLORS[Math.floor(Math.random() * COLORS.length + 1)];
+  return COLORS[Math.floor(Math.random() * COLORS.length)];
 };
 
 export const normalizeString = (string: string) => {
