@@ -19,7 +19,7 @@ const Board = () => {
   useEffect(() => {
     dispatch(fetchTickets());
     dispatch(fetchStatuses());
-  }, []);
+  }, [dispatch]);
 
   return (
     <ScrollContainer className="ml-4 px-3 h-200 box-border min-w-100% m-auto mt-4 flex justify-start overflow-x-auto">

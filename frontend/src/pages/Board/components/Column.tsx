@@ -56,11 +56,11 @@ const Column = ({ status, tickets }: IProps) => {
     <section className={`${defaultClasses} ${columnClasses}`}>
       <p className="justify-center relative mb-2">
         <span className="text-xl">{status.title}</span>
-        {status.id && status.id > (DEFAULT_COLUMNS_COUNT - 1).toString() && (
+        {status.id ? status.id > (DEFAULT_COLUMNS_COUNT - 1).toString() && (
           <button className="absolute right-2 top-2" onClick={toggleModal}>
             <TrashSvg />
           </button>
-        )}
+        ) : null}
       </p>
       <div className="overflow-y-auto w-full flex flex-col items-center">
         {tickets.map((ticket) => {
